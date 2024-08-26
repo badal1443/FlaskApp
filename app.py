@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     home_data={"page":"home"}
+    print('Request for index page received')
     return jsonify(home_data)
-    #print('Request for index page received')
     #return render_template('index.html')
  
 @app.route("/get-order/<order_id>")
