@@ -17,12 +17,12 @@ client = MongoClient(uri,tlsCAFile=certifi.where())
 
 # Send a ping to confirm a successful connection
 try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
+    #client.admin.command('ping')
+    #print("Pinged your deployment. You successfully connected to MongoDB!")
 
     db=client["SQLAuthority"]
     collection=db.get_collection("neworder")
-    print(collection.find_one({"orderno":"123"}))
+    #print(collection.find_one({"orderno":"123"}))
 except Exception as e:
     print(e)
 
