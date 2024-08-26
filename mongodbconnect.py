@@ -33,8 +33,8 @@ def get_order(orderid):
         data=json_util.dumps(collection.find_one({'orderno':orderid}))
         return json.loads(data)
     except Exception as e:
-        print(f"exception in finding order {orderid}")
-        print(e)
+        return f"exception in finding order {orderid}"
+        #print(e)
 
 
 def create_new_order(orderDict):
