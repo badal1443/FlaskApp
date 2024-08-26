@@ -1,13 +1,13 @@
 
 from pymongo.mongo_client import MongoClient
 import certifi
-import os
+from os import environ
 from bson import json_util
 import json
 from flask import jsonify
 
 #uri = os.getenv('MONGO_DB_CONN')
-uri=os.getenv('MONGO_DB_CONN')
+uri=environ.get('MONGO_DB_CONN')
 
 #print(os.getenv('MONGO_DB_CONN'))
 # Create a new client and connect to the server
