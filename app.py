@@ -21,5 +21,5 @@ def addOrder():
     mc.create_new_order(order)
     return jsonify(order)
 
-if __name__=="__main__":
-    app.run()
+if __name__ == '__main__':
+   app.run()
