@@ -1,6 +1,7 @@
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
-import mongodbconnect as mc
+#import mongodbconnect as mc
+from mongodbconnect import get_order as gc
 
 from os import environ
 
@@ -19,7 +20,7 @@ def home():
 def get_order(order_id):
     #return "hello"
     #return render_template('index.html')
-    return jsonify(mc.get_order(order_id))
+    return jsonify(gc(order_id))
 
 @app.route("/add-user", methods=['POST'])
 def addOrder():
