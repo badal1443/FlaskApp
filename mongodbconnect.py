@@ -32,7 +32,7 @@ def get_order(orderid):
     try:
         #data=json_util.dumps(collection.find_one({'orderno':orderid}))
         data={"Hello":"Someone"}
-        return json.loads(data)
+        return orderid
     except Exception as e:
         return f"exception in finding order {orderid}"
         #print(e)
