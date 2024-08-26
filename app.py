@@ -17,7 +17,8 @@ def home():
  
 @app.route("/get-order/<order_id>")
 def get_order(order_id):
-    return render_template('index.html')
+    return "hello"
+    #return render_template('index.html')
     #return jsonify(mc.get_order(order_id))
 
 @app.route("/add-user", methods=['POST'])
