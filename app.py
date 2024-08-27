@@ -10,10 +10,10 @@ app = Flask(__name__)
 def home():
     #home_data={"page":"home"}
     print('Request for index page received 123')
-    return jsonify(home_data)
-    #if environ.get('MONGO_DB_CONN') is not None:
-      #return render_template('index2.html')
-    #return render_template('index.html')
+    #return jsonify(home_data)
+    if environ.get('MONGO_DB_CONN') is not None:
+      return render_template('index2.html')
+    return render_template('index.html')
  
 @app.route("/get-order/<order_id>")
 def get_order(order_id):
