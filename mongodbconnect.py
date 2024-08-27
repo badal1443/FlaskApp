@@ -1,8 +1,8 @@
 
 from pymongo.mongo_client import MongoClient
 import certifi
-#from os import environ
-import os
+from os import environ
+#import os
 from bson import json_util
 import json
 from flask import jsonify
