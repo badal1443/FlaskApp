@@ -30,10 +30,8 @@ except Exception as e:
 
 def get_order(orderid):
     try:
-        #data=json_util.dumps(collection.find_one({'orderno':orderid}))
-        data={"Hello":"Someone"}
-        #return orderid
-        return "<html>hello</html>"
+        data=json_util.dumps(collection.find_one({'orderno':orderid}))
+        return json.loads(data)
     except Exception as e:
         return f"exception in finding order {orderid}"
         #print(e)
