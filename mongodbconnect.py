@@ -30,6 +30,8 @@ except Exception as e:
 
 def get_order(orderid):
     try:
+        db=client["SQLAuthority"]
+        collection=db.get_collection("neworder")
         data=json_util.dumps(collection.find_one({'orderno':orderid}))
         return json.loads(data)
     except Exception as e:
