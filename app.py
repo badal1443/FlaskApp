@@ -20,7 +20,7 @@ def get_order(order_id):
     #return jsonify(mc.get_order(order_id))
     data=jsonify(mc.get_order(order_id))
     data="<div>"+str(data)+"</div>"
-    return render_template('index3.html', data)
+    return render_template('index3.html')
 
 @app.route("/add-user", methods=['POST'])
 def addOrder():
