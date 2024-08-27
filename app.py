@@ -20,7 +20,7 @@ def get_order(order_id):
     #return jsonify(mc.get_order(order_id))
     data=jsonify(mc.get_order(order_id))
     data="<div>"+str(data)+"</div>"
-    return data
+    return "hello"
 
 @app.route("/add-user", methods=['POST'])
 def addOrder():
