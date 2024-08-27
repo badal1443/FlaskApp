@@ -16,11 +16,11 @@ def home():
       return render_template('index2.html')
     return render_template('index.html')
  
-@app.route("/get-order/<order_id>")
-def get_order(order_id):
+@app.route("/get-order/<orderId>")
+def get_order(orderId):
     #return "hello"
     #return render_template('index.html')
-    return jsonify(gc(order_id))
+    return jsonify(gc(orderId))
 
 @app.route("/add-user", methods=['POST'])
 def addOrder():
